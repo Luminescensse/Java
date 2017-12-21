@@ -9,6 +9,7 @@ public class Cat {
     public int weight;
     public int strength;
 
+    // конструктор
     public Cat(String name, int age, int weight, int strength) {
         this.name = name;
 
@@ -31,25 +32,26 @@ public class Cat {
         }
     }
 
+    // бой между двумя котами
     public boolean fight(Cat anotherCat) {
         if (anotherCat.age == this.age && anotherCat.strength == this.strength
             && anotherCat.weight == this.weight) {
             throw new IllegalArgumentException("At least one parameter must be different");
         }
         
-        if (Math.abs(anotherCat.strength - this.strength) > 1) {
+        if (Math.abs(anotherCat.strength - this.strength) > 1) { // проверка на силу
             if (anotherCat.strength < this.strength) {
                 return true;
             } else {
                 return false;
             }
-        } else if (Math.abs(anotherCat.age - this.age) > 4) {
-            if (anotherCat.age > this.age) {
+        } else if (Math.abs(anotherCat.age - this.age) > 3) { // проверка на возраст
+            if (anotherCat.age > this.age && this.age > 1) {
                 return true;
             } else {
                 return false;
             }
-        } else if (Math.abs(anotherCat.weight - this.weight) > 1) {
+        } else if (Math.abs(anotherCat.weight - this.weight) > 1) { // проверка на вес
             if (anotherCat.weight > this.weight) {
                 return true;
             } else {
