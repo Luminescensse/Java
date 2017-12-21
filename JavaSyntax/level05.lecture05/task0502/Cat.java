@@ -32,6 +32,11 @@ public class Cat {
     }
 
     public boolean fight(Cat anotherCat) {
+        if (anotherCat.age == this.age && anotherCat.strength == this.strength
+            && anotherCat.weight == this.weight) {
+            throw new IllegalArgumentException("At least one parameter must be different");
+        }
+        
         if (Math.abs(anotherCat.strength - this.strength) > 1) {
             if (anotherCat.strength < this.strength) {
                 return true;
@@ -51,6 +56,11 @@ public class Cat {
                 return false;
             }
         } else {
+            //if (anotherCat.strength < this.strength || anotherCat.age > this.age || anotherCat.weight > this.weight) {
+            //    return true;
+            //} else {
+            //    return false;
+            //}
             int run = (int) (Math.random() * 10);
             if (run < 6) {
                 return true;
