@@ -38,7 +38,7 @@ public class Cat {
             } else {
                 return false;
             }
-        } else if (Math.abs(anotherCat.age - this.age) > 3) {
+        } else if (Math.abs(anotherCat.age - this.age) > 4) {
             if (anotherCat.age > this.age) {
                 return true;
             } else {
@@ -66,8 +66,8 @@ public class Cat {
             Cat cat2 = new Cat("Murka", 5, 1, 6);
             System.out.println(cat1.fight(cat2));
             System.out.println(cat2.fight(cat1));
-        } catch (IllegalArgumentException e) {
-            System.out.println(e);
+        } catch (IllegalArgumentException exception) {
+            System.out.println(exception);
         }
     }
 }
