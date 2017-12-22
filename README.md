@@ -1,1 +1,3 @@
-Мои наработки
+Изучаем Java
+
+http://proglang.su/java
