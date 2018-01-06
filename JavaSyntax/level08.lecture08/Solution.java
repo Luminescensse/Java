@@ -2,6 +2,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Удаление повторов и заданных значений из Map
+ * @author junior
+ * @version 1.0
+ */
 public class Solution {
     public static HashMap<String, String> createMap() {
 
